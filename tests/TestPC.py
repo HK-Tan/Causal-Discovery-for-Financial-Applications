@@ -382,3 +382,7 @@ class TestPC(unittest.TestCase):
         print('test_pc_load_bnlearn_graphs_with_d_separation passed!\n')
 
     
+#print('Now start all tests ...')
+#if __name__ == '__main__':
+#    unittest.main()
+#    print('All tests passed!')

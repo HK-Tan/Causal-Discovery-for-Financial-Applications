@@ -7,6 +7,8 @@ import causallearn.utils.cit as cit
 
 # TODO : Design more comprehensive test cases, including: design dataset of corner cases.
 class TestCIT_KCI(unittest.TestCase):
+    print("Testing CIT_KCI...")
+    print("Testing Gaussian Dist...")
     def test_Gaussian_dist(self):
         np.random.seed(10)
         X = np.random.randn(300, 1)
@@ -77,6 +79,7 @@ class TestCIT_KCI(unittest.TestCase):
         self.assertEqual(pvalue03, pvalue03_truth)
         self.assertEqual(pvalue032, pvalue032_truth)
 
+    print("Testing Exp Dist...")
     def test_Exponential_dist(self):
         np.random.seed(10)
         X = np.random.exponential(size=(300, 1))
@@ -146,6 +149,7 @@ class TestCIT_KCI(unittest.TestCase):
         self.assertEqual(pvalue03, pvalue03_truth)
         self.assertEqual(pvalue032, pvalue032_truth)
 
+    print("Testing Uniform Dist...")
     def test_Uniform_dist(self):
         np.random.seed(10)
         X = np.random.uniform(size=(300, 1))
@@ -215,6 +219,7 @@ class TestCIT_KCI(unittest.TestCase):
         self.assertEqual(pvalue03, pvalue03_truth)
         self.assertEqual(pvalue032, pvalue032_truth)
 
+    print("Testing Mixed Dist...")
     def test_Mixed_dist(self):
         np.random.seed(10)
         X = np.random.uniform(size=(300, 1))
