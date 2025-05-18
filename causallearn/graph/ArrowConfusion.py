@@ -99,3 +99,25 @@ class ArrowConfusion:
 
     def get_arrows_recall_ce(self):
         return self.__arrowsTpCE / (self.__arrowsTpCE + self.__arrowsFnCE)
+    
+    def get_arrows_f1(self):
+        """
+        Compute the F1 score for the arrow confusion.
+
+        Returns
+        -------
+        float
+            F1 score.
+        """
+        return 2 * self.get_arrows_precision() * self.get_arrows_recall() / (self.get_arrows_precision() + self.get_arrows_recall())
+
+    def get_arrows_f1_ce(self):
+        """
+        Compute the F1 score for the arrow confusion with causal edges.
+
+        Returns
+        -------
+        float
+            F1 score.
+        """
+        return 2 * self.get_arrows_precision_ce() * self.get_arrows_recall_ce() / (self.get_arrows_precision_ce() + self.get_arrows_recall_ce())

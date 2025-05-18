@@ -54,3 +54,19 @@ class AdjacencyConfusion:
 
     def get_adj_recall(self):
         return self.__adjTp / (self.__adjTp + self.__adjFn)
+    
+    def get_adj_f1(self):
+        """
+        Compute the F1 score for the adjacency confusion.
+
+        Returns
+        -------
+        float
+            The F1 score.
+        """
+        precision = self.get_adj_precision()
+        recall = self.get_adj_recall()
+        if precision + recall == 0:
+            return 0.0
+        return 2 * (precision * recall) / (precision + recall)
+
